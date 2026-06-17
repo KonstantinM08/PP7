@@ -2,7 +2,7 @@
 
 ## Goal
 
-In this exercise you will:
+In this exercise you will:  
 
 * **Understand** each stage of the C compilation pipeline (preprocessing, compilation to assembly, assembling, and linking).
 * **Inspect** intermediate outputs to see how your C code transforms at each step.
