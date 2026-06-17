@@ -1,7 +1,7 @@
 # PP7
 
 ## Goal
-
+ 
 In this exercise you will:  
 
 * **Understand** each stage of the C compilation pipeline (preprocessing, compilation to assembly, assembling, and linking).
