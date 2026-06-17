@@ -1,0 +1,12 @@
+gcc -E sample.c -o solutions/sample.i
+# The preprocessor handles lines starting with a # character like #include and define
+#it expands any macros
+# it strips out comments
+
+gcc -c solutions/sample.s -o solutions/sample.o
+# The assembler takes the text-based assembly code and converts it to machine code
+
+gcc solutions/sample.o -o solutions/sample
+
+# The linker takes the object file and combines it with the pre-compiled machine code for libary functions. 
+It resolves memory addresses and prouces the final executable. 
