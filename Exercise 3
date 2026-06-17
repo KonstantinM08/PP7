@@ -1,0 +1,13 @@
+When compiling main.c, the compliler processes the file from top to bottom.
+if it encounters the add(5,7) function call, without knowing add, i will throw out
+an error,since the function's signature is unkown. The extern keyword is used 
+to disregard the unknown signature hoping the linker will find the function.
+
+By separation compilation it is only necessary to recomplie the specific .c files 
+that changed into new .o. The unchanged .o files can be reused when linking. 
+This is especially usfull in larger codebases.
+
+Both single command and manual linking compile to the same temporary 
+object file and link them under the hood. single command hides this 
+process and discards the object file afterwards. Manual linking seperates
+this steps.
