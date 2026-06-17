@@ -65,6 +65,9 @@ In this exercise you will:
 
    ```bash
    gcc -E sample.c -o solutions/sample.i
+   # The preprocessor handles lines starting with a # character like #include and define
+   #it expands any macros
+   # it strips out comments
    ```
 
    * Open `solutions/sample.i` in an editor and note how `#include <stdio.h>` expands and macros are handled.
@@ -72,6 +75,7 @@ In this exercise you will:
 
    ```bash
    gcc -S solutions/sample.i -o solutions/sample.s
+     # The compiler takes the preprocessed C code and translates it into assembly specific to the computer processor architecture.
    ```
 
    * Examine `solutions/sample.s` to see the generated assembly instructions for `printf` and `return`.
@@ -79,6 +83,7 @@ In this exercise you will:
 
    ```bash
    gcc -c solutions/sample.s -o solutions/sample.o
+   # The assembler takes the text-based assembly code and converts it to machine code
    ```
 
    * Verify that `solutions/sample.o` is an object file (e.g., with `file sample.o`).
@@ -86,6 +91,7 @@ In this exercise you will:
 
    ```bash
    gcc solutions/sample.o -o solutions/sample
+   # The linker takes the object file and combines it with the pre-compiled machine code for libary functions. It resolves memory addresses and prouces the final executable. 
    ```
 
    * Run `./solutions/sample` and confirm it prints `Hello, PP7!`.
